@@ -1,0 +1,19 @@
+\documentclass{article}
+  \usepackage[top=0mm, bottom=0mm, left=0mm, right=0mm]{geometry}
+  \usepackage{etoolbox}
+  \usepackage{graphicx}
+  \usepackage{catchfile}
+  \usepackage{float}
+
+\begin{document}
+  \CatchFileDef{\imageList}{files.list}{}
+
+  \renewcommand{\do}[1]{
+    \pagebreak
+    \begin{figure}[H]
+      \centerline{\includegraphics[width=0.9\paperwidth]{#1}}
+    \end{figure}
+  }
+  \expandafter\docsvlist\expandafter{\imageList}
+
+\end{document}
