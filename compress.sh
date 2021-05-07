@@ -9,7 +9,7 @@ fi
 
 if [ $# -eq 0 ]
   then
-    echo "Defaulting to 150 DPI (use $0 <DPI> to override)"
+    echo "Defaulting to $DPI DPI (use $0 <DPI> to override)"
 else
     DPI=$1
     echo "Using $DPI DPI"
