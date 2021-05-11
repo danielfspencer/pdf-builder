@@ -9,14 +9,13 @@
   \CatchFileDef{\imageList}{files.list}{}
 
   \renewcommand{\do}[1]{
-    \pagebreak
     \hspace{0pt}
     \vfill
     \begin{figure}[H]
       \centerline{\includegraphics[width=0.9\paperwidth]{#1}}
     \end{figure}
     \vfill
-    \hspace{0pt}
+    \pagebreak
   }
   \expandafter\docsvlist\expandafter{\imageList}
 
